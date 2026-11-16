@@ -1,4 +1,4 @@
-# Satellite-Image-Enhancement-Using-CLAHE-project
+# Satellite Image Enhancement Using CLAHE
 
 ## Project Description
 
@@ -23,43 +23,82 @@ space to produce an enhanced image while preserving its original colors.
 5.  Results are automatically saved in a new output folder beside the
     selected image.
 
-## Output Images
+## Results
 
-The `CLAHE_Results` folder contains:
+The program generates the following image outputs:
 
   -----------------------------------------------------------------------
-  File                                Description
+  Output file                         Result
   ----------------------------------- -----------------------------------
-  `01_Original_Image.png`             Original input satellite image
+  `01_Original_Image.png`             Original satellite image
 
-  `02_Grayscale_Image.png`            Grayscale version of the input
+  `02_Grayscale_Image.png`            Grayscale input image
 
-  `03_Histogram_Equalization.png`     Result after global Histogram
-                                      Equalization
+  `03_Histogram_Equalization.png`     Global Histogram Equalization
+                                      result
 
-  `04_Grayscale_CLAHE.png`            Result after grayscale CLAHE
+  `04_Grayscale_CLAHE.png`            Grayscale CLAHE result
 
-  `05_Color_CLAHE_Enhanced.png`       Color-preserved CLAHE result using
+  `05_Color_CLAHE_Enhanced.png`       Color-preserving CLAHE result using
                                       LAB color space
-
-  `06_Original_Histogram.png`         Histogram of the original grayscale
-                                      image
-
-  `07_HE_Histogram.png`               Histogram after Histogram
-                                      Equalization
-
-  `08_CLAHE_Histogram.png`            Histogram after grayscale CLAHE
   -----------------------------------------------------------------------
+
+### Image Results
+
+The following previews are displayed when the generated image files are
+stored in the `CLAHE_Results` folder alongside this README.
+
+**1. Original Satellite Image**
+
+![Original satellite image](CLAHE_Results/01_Original_Image.png)
+
+**2. Grayscale Image**
+
+![Grayscale satellite image](CLAHE_Results/02_Grayscale_Image.png)
+
+**3. Histogram Equalization Result**
+
+![Histogram Equalization
+result](CLAHE_Results/03_Histogram_Equalization.png)
+
+**4. Grayscale CLAHE Result**
+
+![Grayscale CLAHE result](CLAHE_Results/04_Grayscale_CLAHE.png)
+
+**5. Color CLAHE Enhanced Result**
+
+![Color CLAHE enhanced satellite
+image](CLAHE_Results/05_Color_CLAHE_Enhanced.png)
+
+### Histogram Results
+
+**Original Image Histogram**
+
+![Original image histogram](CLAHE_Results/06_Original_Histogram.png)
+
+**Histogram Equalization Histogram**
+
+![Histogram Equalization histogram](CLAHE_Results/07_HE_Histogram.png)
+
+**CLAHE Histogram**
+
+![CLAHE histogram](CLAHE_Results/08_CLAHE_Histogram.png)
+
+## Output Files
+
+The `CLAHE_Results` folder contains the five processed/original images
+and three histogram images listed above.
 
 ## Evaluation
 
 The script calculates: - **Contrast:** Standard deviation of image
-intensity values (`std2`). - **Entropy:** Information content of the
-grayscale image (`entropy`).
+intensity values using `std2`. - **Entropy:** Information content of the
+grayscale image using `entropy`.
 
 The contrast and entropy comparison is calculated for the original
 grayscale image, Histogram Equalization result, and grayscale CLAHE
-result.
+result. The color CLAHE output is currently included as a visual result
+and is not included in these numerical calculations.
 
 ## Notes
 
@@ -68,4 +107,8 @@ result.
 -   A new results folder is created for each run (for example,
     `CLAHE_Results`, `CLAHE_Results_1`, `CLAHE_Results_2`) so previous
     outputs are not overwritten.
+-   The image previews above require the corresponding PNG files to be
+    present at the specified relative paths. If a run creates
+    `CLAHE_Results_1` or another numbered folder, update the image paths
+    to match that folder.
 -   Enhancement results depend on the selected input image.
